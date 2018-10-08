@@ -89,11 +89,12 @@ public class CardTrick {
 
   /**
    * Shuffles (separately) the contents of the original deck, the red pile, and
-   * the black pile. Note that it will be the case that either the original deck
-   * contains all of the cards, or (after invocation of {@link #deal()}) none of
-   * the cards; in the latter case, the red and black piles contain a combined
-   * total of 26 cards (half of the deck), while the discard pile contains the
-   * other 26. (Note that the discard pile is not shuffled by this method.)
+   * the black pile. Note that it will be the case that the original deck
+   * contains either all of the cards, or (after invocation of {@link #deal()})
+   * <em>none</em> of the cards; in the latter case, the red and black piles
+   * contain a combined total of 26 cards (half of the deck), while the discard
+   * pile contains the other 26. (Note that the discard pile is not shuffled by
+   * this method.)
    */
   public void shuffle() {
     Collections.shuffle(deck, rng);
